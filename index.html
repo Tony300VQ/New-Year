@@ -34,6 +34,21 @@ html{
   background-clip: text;
   animation: aparecer_feliz 2s ease-in-out 7s forwards;
 }
+	  .feliz2 {
+  width: 100%;
+  font-family: 'Pacifico', cursive;
+  font-size: 100px;
+  font-weight: 700;
+  text-align: center;
+  position: absolute;
+  top: 40%;
+  opacity: 0;
+  background: linear-gradient(to right, #ffd900 2%, #f7df0b 88%);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: aparecer_feliz 2s ease-in-out 7s forwards;
+	  }
 
 .numero {
   position: relative;
@@ -368,6 +383,7 @@ a.autor{
   </style>
 </head>
 <body>
+	<div class="feliz2">Happy New Year</div>
     <div class="feliz" id="textoMostrado">H</div>
 <div class="ano_nuevo">
   <span>202</span>
@@ -427,7 +443,7 @@ a.autor{
         // Verificar si el usuario ingresó un texto y no canceló
         if (texto !== null) {
             // Mostrar el texto ingresado en el div con id "textoMostrado"
-            document.getElementById("textoMostrado").innerHTML = "Happy New Year " + texto;
+            document.getElementById("textoMostrado").innerHTML =texto;
         } else {
             // El usuario canceló la entrada de texto
             console.log("Pon tu nombre :[");
